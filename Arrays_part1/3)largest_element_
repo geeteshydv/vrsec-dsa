@@ -1,0 +1,37 @@
+https://www.geeksforgeeks.org/problems/largest-element-in-array4009/0
+
+
+Cpp Code-:
+int largest(vector<int> &arr, int n)
+{
+        int ans=INT_MIN;
+        for(int i=0;i<n;i++)
+        {
+            ans=max(ans,arr[i]);
+        }
+        return ans;
+}
+
+
+Java Code-:
+public int largest(int arr[], int n)
+{
+       ArrayList<Integer>al=new ArrayList<Integer>();
+       int ans=Integer.MIN_VALUE;
+       for(int i=0;i<n;i++)
+       {
+           al.add(arr[i]);
+           ans=Math.max(ans,al.get(i));
+       }
+       return ans;
+}
+
+
+Python -:
+class Solution:
+    def largest(self, arr: List[int]) -> int:
+        ans = float('-inf')  # Initialize to negative infinity
+        for num in arr:
+            ans = max(ans, num)  # Update ans if the current num is larger
+        return ans
+        
